@@ -106,8 +106,28 @@
             ],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "@angular/fire:deploy",
+          "options": {
+            "version": 2
+          },
+          "configurations": {
+            "production": {
+              "buildTarget": "gsc24:build:production",
+              "serveTarget": "gsc24:serve:production"
+            },
+            "development": {
+              "buildTarget": "gsc24:build:development",
+              "serveTarget": "gsc24:serve:development"
+            }
+          },
+          "defaultConfiguration": "production"
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "39eee233-c0e6-4f80-b603-6daa719186bf"
   }
 }
