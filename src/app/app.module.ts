@@ -14,6 +14,7 @@ import { getMessaging, provideMessaging } from '@angular/fire/messaging';
 import { getPerformance, providePerformance } from '@angular/fire/performance';
 import { getStorage, provideStorage } from '@angular/fire/storage';
 import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-config';
+import { environment } from './../environments/environment';
 
 @NgModule({
   declarations: [
@@ -22,31 +23,7 @@ import { getRemoteConfig, provideRemoteConfig } from '@angular/fire/remote-confi
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp(() => initializeApp(
-      {"projectId":"gsc24-57103",
-      "appId":"1:221195242542:web:5acaca4ef0f8e1b4bd23bf",
-      "databaseURL":"https://gsc24-57103-default-rtdb.firebaseio.com",
-      "storageBucket":"gsc24-57103.appspot.com",
-      // "locationId":"us-central",
-      "apiKey":"AIzaSyDnJuqjvj4rgdpmXLxI4upwpSnOlsBdY7Q",
-      "authDomain":"gsc24-57103.firebaseapp.com",
-      "messagingSenderId":"221195242542",
-      "measurementId":"G-Z9NX0L5HBC"
-    })),
-    provideAuth(() => getAuth()),
-    provideAnalytics(() => getAnalytics()),
-    provideAppCheck(() => {
-      // TODO get a reCAPTCHA Enterprise here https://console.cloud.google.com/security/recaptcha?project=_
-      const provider = new ReCaptchaEnterpriseProvider("6LeI2nMpAAAAAH6ORY4fgznytlBFG1Yl4IIuWqCQ");
-      return initializeAppCheck(undefined, { provider, isTokenAutoRefreshEnabled: true });
-    }),
-    provideFirestore(() => getFirestore()),
-    provideDatabase(() => getDatabase()),
-    provideFunctions(() => getFunctions()),
-    provideMessaging(() => getMessaging()),
-    providePerformance(() => getPerformance()),
-    provideStorage(() => getStorage()),
-    provideRemoteConfig(() => getRemoteConfig())
+    provideFirebaseApp( () => initializeApp( environment.firebase ) )
   ],
   providers: [
     provideClientHydration(),
