@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('ttf'),
+}
+
+.app-root {
+    font-family: 'Ubuntu', sans-serif;
+}
