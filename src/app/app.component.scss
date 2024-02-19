@@ -10,4 +10,14 @@
 
 .app-root {
     font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: row;
+}
+
+.navigation {
+  width: 10%;
+}
+
+.outlet {
+  width: 90%;
 }

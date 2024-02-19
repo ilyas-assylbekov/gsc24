@@ -1,10 +1,22 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { AuthGuard, redirectLoggedInTo, redirectUnauthorizedTo, hasCustomClaim } from "@angular/fire/auth-guard";
+
 import { HomeComponent } from './pages/HomePage/home.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { DiscoverPageComponent } from './pages/discover-page/discover-page.component';
+import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
+
+const adminOnly = () => hasCustomClaim( "admin" );
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo( ["login"] );
+const redirectLoggedInToHome = () => redirectLoggedInTo([""]);
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
+  { path: 'search', component: SearchPageComponent, canActivate: [ AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
+  { path: 'discover', component: DiscoverPageComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
+  { path: 'login', component: LogInPageComponent },
 ];
 
 @NgModule({

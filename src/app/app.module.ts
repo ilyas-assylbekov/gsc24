@@ -38,7 +38,8 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    provideFirebaseApp( () => initializeApp( environment.firebase ) )
+    provideFirebaseApp( () => initializeApp( environment.firebase ) ),
+    provideAuth(() => getAuth()),
   ],
   providers: [
     provideClientHydration(),
