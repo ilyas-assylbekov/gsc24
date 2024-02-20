@@ -14,6 +14,9 @@ export class GptComponent {
   constructor( private gptService : GptService ) {}
 
   sendRequest() {
+
+    // console.log(this.textInput);
+
     const requestBody = {
       "contents": {
         "role": "user",
@@ -31,6 +34,8 @@ export class GptComponent {
         "topK": 40
       }
     };
+
+    // console.log( requestBody );
 
     this.gptService.getGptResponse( requestBody )
       .subscribe( res => {
