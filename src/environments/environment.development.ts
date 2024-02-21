@@ -1,6 +1,7 @@
 export const environment = {
     production: false,
     region: "us-central1",
+    API_KEY: "AIzaSyAV95eMAxZ_nq-P7PwtDed29xE1g-n9yyk",
     firebase: {
         apiKey: "AIzaSyDnJuqjvj4rgdpmXLxI4upwpSnOlsBdY7Q",
         authDomain: "gsc24-57103.firebaseapp.com",
