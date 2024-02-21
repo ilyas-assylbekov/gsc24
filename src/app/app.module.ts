@@ -27,6 +27,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GptComponent } from './components/gpt/gpt.component';
 import { FormsModule } from '@angular/forms';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { FormsModule } from '@angular/forms';
     LogInPageComponent,
     SearchPageComponent,
     GptComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -47,6 +49,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule,
     provideFirebaseApp( () => initializeApp( environment.firebase ) ),
     provideAuth(() => getAuth()),
+    provideFirestore(() => getFirestore()),
   ],
   providers: [
     provideClientHydration(),

@@ -8,6 +8,7 @@ import { SearchPageComponent } from './pages/search-page/search-page.component';
 import { DiscoverPageComponent } from './pages/discover-page/discover-page.component';
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
 import { GptComponent } from './components/gpt/gpt.component';
+import { ProfileComponent } from './pages/profile/profile.component';
 
 const adminOnly = () => hasCustomClaim( "admin" );
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo( ["login"] );
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'discover', component: DiscoverPageComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'login', component: LogInPageComponent },
   { path: 'gemini', component: GptComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
 ];
 
 @NgModule({
