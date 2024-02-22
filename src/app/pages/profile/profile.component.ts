@@ -1,10 +1,9 @@
 import { Component, inject } from '@angular/core';
 import { Firestore, collectionData } from '@angular/fire/firestore';
 import { User } from '../../models/user';
-import { Observable, async } from 'rxjs';
+import { Observable } from 'rxjs';
 import { DocumentReference, addDoc, collection, doc, getDoc, setDoc } from '@angular/fire/firestore';
 import { Auth } from '@angular/fire/auth';
-import { set } from 'firebase/database';
 
 @Component({
   selector: 'app-profile',
@@ -49,11 +48,6 @@ export class ProfileComponent{
       const docRef = doc( userProfileCollection, user.uid );
       setDoc( docRef, this.profile );
     }
-    
-
-    // addDoc( userProfileCollection, this.profile ).then( (docRef : DocumentReference) => {
-
-    // } );
   }
 
 }
