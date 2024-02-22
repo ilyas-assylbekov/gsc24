@@ -47,14 +47,15 @@ import { ProfileComponent } from './pages/profile/profile.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    provideFirebaseApp( () => initializeApp( environment.firebase ) ),
+    provideFirebaseApp(() => initializeApp( environment.firebase ) ),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
   ],
   providers: [
     provideClientHydration(),
     ScreenTrackingService,
-    UserTrackingService
+    UserTrackingService,
+    
   ],
   bootstrap: [AppComponent]
 })
