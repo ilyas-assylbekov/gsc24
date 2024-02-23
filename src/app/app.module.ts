@@ -50,6 +50,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     provideFirebaseApp(() => initializeApp( environment.firebase ) ),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),
+    provideAnalytics(() => getAnalytics()),
   ],
   providers: [
     provideClientHydration(),
