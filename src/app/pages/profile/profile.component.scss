@@ -1,0 +1,34 @@
+ .profile-container {
+    padding: 3vw;
+    color: whitesmoke;
+    height: 100vh;
+    form{
+        background-color: #282828;
+        width: 20vw; 
+        padding: 30px 45px;
+        border-radius: 10%;
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        label{
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .form-group{
+            display: flex;
+            flex-direction: column;
+        }
+        button{
+            margin-top: 4vh;
+            margin-left: 8vw;
+            padding: 5px 10px;
+            border: 2px solid transparent;
+            border-radius: 20px;
+            background-color: white;
+            color: black;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    }
+}

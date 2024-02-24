@@ -1,0 +1,30 @@
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../assets/fonts/Ubuntu/Ubuntu-Regular.ttf') format('ttf'),
+}
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../assets/fonts/Poppins/Poppins-Regular.ttf') format('ttf'),
+}
+
+.app-root {
+    font-family: 'Ubuntu', sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+
+.navigation {
+  height: 100vh;
+  flex:2;
+}
+
+.outlet {
+    height: 100vh;
+  flex: 12;
+  margin-right: -20px;
+  background-color: (#161616);
+}

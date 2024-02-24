@@ -1,0 +1,26 @@
+*{
+    background-color: (#161616);
+    color: whitesmoke;
+}
+.top_section{
+    padding: 3vw;
+    height:  100%;
+    p{
+        font-size: larger;
+        font-weight: 400;
+        width: 45vw;
+        display: inline-block;
+        vertical-align: middle;
+    }
+    img{
+        vertical-align: middle;
+        margin-left: 40px;
+        border-radius: 50px;
+        width:30vw;
+        height: 35vh;
+        display: inline-block;
+    }
+}
+hr{ 
+    width: 50%;
+}

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "gsc24-57103": {
+      "hosting": {
+        "gsc24": [
+          "gsc24-57103"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "gsc24-57103"
+  }
+}

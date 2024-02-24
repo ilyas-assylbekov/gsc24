@@ -1,0 +1,5 @@
+<input type="text" [(ngModel)]="textInput" placeholder="Enter text...">
+<button (click)="sendRequest()">Send Request</button>
+<div *ngIf="responseData">
+    <pre>{{ responseData | json }}</pre>
+</div>
