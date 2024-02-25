@@ -17,6 +17,6 @@ export class SearchPageComponent {
   onSearchButtonClick() : void {
     const user = this.auth.currentUser;
     console.log(user);
-    // this.recommendations = this.recommendationService.getRecommendation(user);
+    //this.recommendations = this.recommendationService.getRecommendation(user);
   }
 }

@@ -8,30 +8,30 @@ import { User } from '@angular/fire/auth';
 })
 export class RecommendService {
 
-  // constructor( private discoveryengineClient : RecommendationServiceClient ) { }
+  /* constructor( private discoveryengineClient : RecommendationServiceClient ) { }
 
-  // async getRecommendation(user1 : User | null) {
+  async getRecommendation(user1 : User | null) {
 
-  //   let userEvent = {};
-  //   if (user1) {
-  //     userEvent = {
-  //       "eventType" : "view-item-list",
-  //       "userPseudoId" : "visitor0",
-  //       "userInfo" : {
-  //         "userId" : user1.uid,
-  //       },
-  //       // "attributionToken" : user2.uid,
-  //     }; 
-  //   }
-  //   let servingConfig = environment.ENGINE_ID;
+    let userEvent = {};
+    if (user1) {
+      userEvent = {
+        "eventType" : "view-item-list",
+        "userPseudoId" : "visitor0",
+        "userInfo" : {
+          "userId" : user1.uid,
+        },
+        // "attributionToken" : user2.uid,
+      }; 
+    }
+    let servingConfig = environment.ENGINE_ID;
 
-  //   const request = {
-  //     servingConfig,
-  //     userEvent,
-  //   };
+    const request = {
+      servingConfig,
+      userEvent,
+    };
 
-  //   const response = await this.discoveryengineClient.recommend(request);
-  //   return response;
+    const response = await this.discoveryengineClient.recommend(request);
+    return response;
 
-  // }
+  } */
 }
