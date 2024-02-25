@@ -24,6 +24,7 @@ import { DiscoverPageComponent } from './pages/discover-page/discover-page.compo
 import { LogInPageComponent } from './pages/log-in-page/log-in-page.component';
 import { SearchPageComponent } from './pages/search-page/search-page.component';
 
+import { MatIconModule } from '@angular/material/icon';
 import { HttpClientModule } from '@angular/common/http';
 import { GptComponent } from './components/gpt/gpt.component';
 import { FormsModule } from '@angular/forms';
@@ -47,6 +48,7 @@ import { ProfileComponent } from './pages/profile/profile.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
+    MatIconModule,
     provideFirebaseApp(() => initializeApp( environment.firebase ) ),
     provideAuth(() => getAuth()),
     provideFirestore(() => getFirestore()),

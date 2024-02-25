@@ -4,13 +4,15 @@ import { User } from '../../models/user';
 import { Observable } from 'rxjs';
 import { DocumentReference, addDoc, collection, doc, getDoc, setDoc } from '@angular/fire/firestore';
 import { Auth } from '@angular/fire/auth';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-profile',
   templateUrl: './profile.component.html',
-  styleUrl: './profile.component.sass'
+  styleUrl: './profile.component.scss'
 })
 export class ProfileComponent{
+ 
 
   profile = {
     name: '',
@@ -21,7 +23,7 @@ export class ProfileComponent{
   private firestore: Firestore = inject(Firestore);
   users$: Observable<User[]>;
 
-  constructor() {
+  constructor(private authService: AuthService) {
     const userProfileCollection = collection( this.firestore, "users" );
     this.users$ = collectionData( userProfileCollection ) as Observable<User[]>; // all users
     this.authProfile(userProfileCollection);
@@ -40,7 +42,11 @@ export class ProfileComponent{
       }
     }
   }
-
+  signOut() {
+    this.authService.signOut();
+    sessionStorage.clear();
+    window.location.reload();
+  }
   saveProfile() {
     const userProfileCollection = collection( this.firestore, "users" );
     const user = this.auth.currentUser;
@@ -49,6 +55,5 @@ export class ProfileComponent{
       setDoc( docRef, this.profile );
     }
   }
-
+ 
 }
-
