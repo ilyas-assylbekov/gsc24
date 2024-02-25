@@ -16,7 +16,7 @@ const redirectLoggedInToHome = () => redirectLoggedInTo([""]);
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
-  { path: 'search', component: SearchPageComponent, canActivate: [ AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
+  { path: 'search', component: SearchPageComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'discover', component: DiscoverPageComponent, canActivate: [AuthGuard], data: { authGuardPipe: redirectUnauthorizedToLogin } },
   { path: 'login', component: LogInPageComponent },
   { path: 'gemini', component: GptComponent },

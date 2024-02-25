@@ -8,7 +8,7 @@ import { HomeComponent } from './pages/HomePage/home.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
-import { getAuth, provideAuth } from '@angular/fire/auth';
+import { AuthModule, getAuth, provideAuth } from '@angular/fire/auth';
 import { getAnalytics, provideAnalytics, ScreenTrackingService, UserTrackingService } from '@angular/fire/analytics';
 import { initializeAppCheck, ReCaptchaEnterpriseProvider, provideAppCheck } from '@angular/fire/app-check';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
@@ -28,6 +28,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { GptComponent } from './components/gpt/gpt.component';
 import { FormsModule } from '@angular/forms';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { RecommendationServiceClient } from '@google-cloud/discoveryengine/build/src/v1alpha';
+import { RecommendService } from './services/recommend.service';
 
 @NgModule({
   declarations: [
@@ -56,7 +58,6 @@ import { ProfileComponent } from './pages/profile/profile.component';
     provideClientHydration(),
     ScreenTrackingService,
     UserTrackingService,
-    
   ],
   bootstrap: [AppComponent]
 })
