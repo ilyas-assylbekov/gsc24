@@ -2,26 +2,104 @@
   <div class="main">
     <div class="left">
       <div class="profile">
-        <img src="" alt="">
+        <img src="https://images.unsplash.com/photo-1619895862022-09114b41f16f?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="profile picture">
+        <div class="info">
+          <h1> Jenna White </h1>
+          <h3> Student at Career Connect </h3>
+          <div class="connections">
+            <div class="column">
+              <p class = "num"> 5 </p>
+              <p> Workshops </p>
+            </div>
+            <div class="column">
+              <p class = "num"> 9 </p>
+              <p> Buddies </p>
+            </div>
+            <div class="column">
+              <p class = "num"> 23 </p>
+              <p> Connections </p>
+            </div>
+          </div> 
+        </div>
       </div>
+      
+      <h1> Total Statistics </h1>
+        <div class="statistics">
+            <div class="column">
+              <mat-icon> check </mat-icon>
+              <p> Courses Attended </p>
+              <p class = "num"> 3 </p>
+            </div>
+            <div class="column">
+              <mat-icon> hourglass_full </mat-icon>
+              <p> Learning hours </p>
+              <p class = "num"> 52 </p>
+            </div>
+            <div class="column">
+              <mat-icon> border_color </mat-icon>
+              <p> Skills acquired </p>
+              <p class = "num"> 7 </p>
+          </div> 
+        </div>
+        <div class="update">
+          <h2>Update Your Profile</h2>
+          <form (ngSubmit)="saveProfile()">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" [(ngModel)]="profile.name" required>
+            </div>
+            <div class="form-group">
+              <label for="interests">Interests (comma-separated)</label>
+              <input type="text" id="interests" name="interests" [(ngModel)]="profile.interests" required>
+            </div>
+            <button type="submit">Save</button>
+          </form>
+       </div>
     </div>
     <div class="right">
-
+      <h1>Friends</h1>
+      <div class="friends">
+        <div class="row">
+          <img src="https://img.freepik.com/free-photo/woman-portrait-walking-street_1328-3257.jpg?t=st=1708837750~exp=1708841350~hmac=1d5f73db835967b1fc8adda66c81255ebfb2ad92c5524449d027b530cc65677c&w=360" alt="">
+          <p class="name">Jane Smith</p>
+          <button class="profile"> Profile </button>
+        </div>
+        <div class="row">
+          <img src="https://img.freepik.com/free-photo/portrait-handsome-man-orange-background_23-2149019987.jpg?t=st=1708838801~exp=1708842401~hmac=6024e7b35039f45ebdffaefdd0d488fbe07e3ff369a0e0c40474c2c6bf66ebca&w=996" alt="">
+          <p class="name">Michael Wilson</p>
+          <button class="profile"> Profile </button>
+        </div>
+        <div class="row">
+          <img src="https://img.freepik.com/free-photo/beautiful-hispanic-woman-wearing-casual-clothes-glasses-happy-face-smiling-with-crossed-arms-looking-camera-positive-person_839833-11768.jpg?t=st=1708838960~exp=1708842560~hmac=91009adc8dd4ee519caaa702baf81da1880d8136b99c2e24dac148422e98ffc5&w=996" alt="">
+          <p class="name">Isabella Garcia</p>
+          <button class="profile"> Profile </button>
+        </div>
+        <button class="view"> View all </button>
+      </div>
+      <h1> Friend Suggestions </h1>
+      <div class="friends">
+        <div class="row">
+          <img src="https://img.freepik.com/free-photo/smiley-man-with-headphones-front-view_23-2149915903.jpg?t=st=1708840898~exp=1708844498~hmac=f66298fe1831aa88b70663b1b9eab793b205c4c8725a51ccf18846f7f1155092&w=360" alt="">
+          <p class="name"> Rajat Anand </p>
+          <div class="options">
+            <button class="add"> <mat-icon>add_circle</mat-icon> </button>
+            <button class="close"><mat-icon>close</mat-icon> </button>
+          </div>
+        </div>
+        <div class="row">
+          <img src="https://img.freepik.com/free-photo/attractive-asian-woman-beige-plaid-jacket-white-tshirt-smiles-takes-selfie-bedroom-listens-music-wireless-headphones_197531-27863.jpg?t=st=1708840595~exp=1708844195~hmac=f3b7685ddfb66a37bd938b4bced5f8ab3c5fe40363d9480c0f2d27bdd3826282&w=996" alt="">
+          <p class="name"> Hana Kim </p>
+          <div class="options">
+            <button class="add"> <mat-icon>add_circle</mat-icon> </button>
+            <button class="close"><mat-icon>close</mat-icon> </button>
+          </div>
+        </div>
+        
+        <button class="view"> View all </button>
     </div>
   </div>
-    <div class="update">
-      <h2>Update Your Profile</h2>
-      <form (ngSubmit)="saveProfile()">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" [(ngModel)]="profile.name" required>
-        </div>
-        <div class="form-group">
-          <label for="interests">Interests (comma-separated)</label>
-          <input type="text" id="interests" name="interests" [(ngModel)]="profile.interests" required>
-        </div>
-        <button type="submit">Save</button>
-      </form>
-   </div>
+  </div>
+  
+  <button (click)="signOut()" class="sign-out">Sign out</button>
   </div>
   

@@ -1,3 +1,26 @@
 .login {
     display: flex;
+    flex-direction: column;
+    h1{
+        color: white;
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+    button{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+        height: 40px;
+        padding: 10px 10px;
+        text-align: center;
+        border: 1px solid black;
+        border-radius: 20px;
+        background-color: white;
+        color: black;
+        font-size: 16px;
+        cursor: pointer;
+    }
 }

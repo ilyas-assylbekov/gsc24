@@ -14,6 +14,7 @@ export class LogInPageComponent {
       .then((result) => {
         // User successfully signed in
         console.log(result);
+        window.location.href = "http://localhost:4200/profile"
       })
       .catch((error) => {
         // Handle errors

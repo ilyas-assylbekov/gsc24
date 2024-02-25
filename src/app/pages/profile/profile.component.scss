@@ -1,29 +1,150 @@
  .profile-container {
     padding: 3vw;
     color: whitesmoke;
-    height: 100vh;
-    form{
-        background-color: #282828;
-        width: 20vw; 
-        padding: 30px 45px;
-        border-radius: 10%;
-        h2 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-        label{
-            padding-bottom: 10px;
-            padding-top: 10px;
-        }
-        .form-group{
+    .main{
+        display: flex;
+        flex-direction: row;
+        
+    .left{
+        display: flex;
+        flex-direction: column;
+        width: 40vw;
+        .profile{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
+            img{
+                height: 250px;
+                width: 250px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            .info{
+                padding-left: 50px;
+                .connections{
+                    border: 10px #282828 solid;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    border-radius: 30px;
+                    padding-left: 20px;
+                    .column{
+                        text-align: center;
+                        .num{
+                        }
+                        padding-right: 20px;
+                        align-self: center;
+                    }
+                }
+    
+            }
         }
-        button{
-            margin-top: 4vh;
-            margin-left: 8vw;
-            padding: 5px 10px;
-            border: 2px solid transparent;
+        .statistics{
+            display: flex;
+            flex-direction: row;
+            padding: 20px;
+            border-radius: 20px;
+            background-color: #282828;
+            .column{
+                display:block;
+                margin: auto;
+                padding-top: 10px;
+                .mat-icon{
+                    display: block;
+                    margin: auto;
+                }
+                .num{
+                    text-align: center;
+                }
+                padding-right: 20px;
+                align-self: center;
+            }
+        }
+        form{
+            background-color: #282828;
+          //  width: 30vw; 
+            padding: 30px 45px;
+            border-radius: 20px;
+            h2 {
+                font-size: 24px;
+                margin-bottom: 20px;
+            }
+            label{
+                padding-bottom: 10px;
+                padding-top: 10px;
+            }
+            .form-group{
+                display: flex;
+                flex-direction: column;
+            }
+            button{
+                margin-top: 4vh;
+                margin-left: 8vw;
+                padding: 5px 10px;
+                border: 2px solid transparent;
+                border-radius: 20px;
+                background-color: white;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    .right{
+        margin-left: 5vw;
+        width: 30vw;
+        .friends{
+            border-radius: 20px;
+            background-color: #282828;
+            padding: 10px;
+        }
+        .row{
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            img{
+                height: 50px;
+                width: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+            p{
+                padding-left: 20px;
+                padding-right: 20px;
+                font-weight: 600;
+            }
+            .profile{   
+                height: 40px;
+                margin-right: 0px;
+                margin-left: auto;
+                padding: 10px 10px;
+                text-align: center;
+                border: 1px solid black;
+                border-radius: 20px;
+                background-color: white;
+                color: black;
+                font-size: 16px;
+                cursor: pointer;
+            }
+            .options{
+                margin-right: 0px;
+                margin-left: auto;
+            }
+            .add, .close{
+                padding: 10px 10px;
+                cursor: pointer;
+                color: white;
+                border: 0px transparent solid;
+                background-color: transparent;
+            }
+        }
+        .view{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px 10px;
+            text-align: center;
+            border: 1px solid black;
             border-radius: 20px;
             background-color: white;
             color: black;
@@ -31,4 +152,21 @@
             cursor: pointer;
         }
     }
+    
+}
+}
+
+.sign-out{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    padding: 10px 10px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: white;
+    color: black;
+    font-size: 16px;
+    cursor: pointer;
 }
