@@ -1,31 +1,37 @@
-import { HttpClient } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Injectable } from '@angular/core';
 import { environment } from '../../environments/environment';
 import { RecommendationServiceClient } from '@google-cloud/discoveryengine/build/src/v1alpha';
+import { User } from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RecommendService {
 
-  private discoveryengineClient = new RecommendationServiceClient();
+  // constructor( private discoveryengineClient : RecommendationServiceClient ) { }
 
-  constructor(private http : HttpClient) { }
+  // async getRecommendation(user1 : User | null) {
 
-  async getRecommendation(userId : string) {
+  //   let userEvent = {};
+  //   if (user1) {
+  //     userEvent = {
+  //       "eventType" : "view-item-list",
+  //       "userPseudoId" : "visitor0",
+  //       "userInfo" : {
+  //         "userId" : user1.uid,
+  //       },
+  //       // "attributionToken" : user2.uid,
+  //     }; 
+  //   }
+  //   let servingConfig = environment.ENGINE_ID;
 
-    const endpoint = "projects/* /locations/global/collections/* /engines/* /servingConfigs/*";
-    const userEvent = {};
-    // const userEvent = { userId };
-    let servingConfig = "";
-    // const servingConfig = this.http.get(endpoint);
+  //   const request = {
+  //     servingConfig,
+  //     userEvent,
+  //   };
 
-    const request = {
-      servingConfig,
-      userEvent,
-    };
-    const response = await this.discoveryengineClient.recommend(request);
+  //   const response = await this.discoveryengineClient.recommend(request);
+  //   return response;
 
-  }
+  // }
 }

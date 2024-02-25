@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { RecommendService } from '../../services/recommend.service';
+import { Auth} from '@angular/fire/auth';
 
 @Component({
   selector: 'app-search-page',
@@ -8,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class SearchPageComponent {
 
+  recommendations: any;
+
+  constructor(private recommendationService : RecommendService, private auth : Auth) {}
+
+  onSearchButtonClick() : void {
+    const user = this.auth.currentUser;
+    console.log(user);
+    // this.recommendations = this.recommendationService.getRecommendation(user);
+  }
 }
